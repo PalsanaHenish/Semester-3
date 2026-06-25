@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n1 = parseInt(prompt("Enter 1st No. "));
+        let n2 = parseInt(prompt("Enter 2st No. "));
+        let op = prompt("Enter Operator ");
+        let ans = 0;
+
+        if(op == '+'){
+            ans = n1 + n2;
+        }
+        else if(op == '-'){
+            ans = n1 - n2;
+        }
+        else if(op == '*'){
+            ans = n1 * n2;
+        }
+        else if(op == '/'){
+            ans = n1 / n2;
+        }
+        else{
+            alert("Invalid Operator!!!");
+        }
+
+        alert("Ans : " + ans);
+        
+    </script>
+</body>
+</html>

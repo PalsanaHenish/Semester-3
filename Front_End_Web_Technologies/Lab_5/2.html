@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        n = parseInt(prompt("Enter size: "));
+        arr = [];
+        for(i=0;i<n;i++){
+            arr[i] = parseInt(prompt("Enter Element: "));
+        }
+
+        for(i=0;i<n;i++){
+            for(j=i+1;j<n;j++){
+                if(a[i]>a[j]){
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        document.write("Sorted Array: "+ arr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        n = parseInt(prompt("Enter size of array 1: "));
+        arr_1 = [];
+        for(i=0;i<n;i++){
+            arr_1[i] = parseInt(prompt("Enter Element: "));
+        }
+
+        n = parseInt(prompt("Enter size array 2: "));
+        arr_2 = [];
+        for(i=0;i<n;i++){
+            arr_2[i] = parseInt(prompt("Enter Element: "));
+        }
+
+        merged_arr = [];
+
+        for(i=0;i<n;i++){
+            merged_arr[i] = arr_1[i];
+        }
+
+        j=0
+        for(i=n;i<n+n;i++){
+            merged_arr[i] = arr_2[j++];
+        }
+
+        for(i=0;i<merged_arr.length-1;i++){
+            for(j=0;j<merged_arr.length-i-1;j++){
+                if(merged_arr[j]>merged_arr[j+1]){
+                    temp = merged_arr[j];
+                    merged_arr[j] = merged_arr[j+1];
+                    merged_arr[j+1] = temp; 
+                }
+            }
+        }
+
+        document.write(merged_arr);
+    </script>
+</body>
+</html>

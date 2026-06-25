@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            position: absolute;
+            left: 25%;
+            top: 10%;
+            width: 500px;
+        }
+        .a1,.a2,.a3{
+            font-size: 45px;
+            color: orange;
+        }
+        .a1,.a2,.a3:visited{
+            color: red;
+        }
+        p{
+            font-size: x-large;
+            transition: all 1s;
+        }
+        p::first-letter{
+            font-size: 50px;
+            font-family: cursive;
+            color: orange;
+        }
+        p::first-line{
+            font-weight: bold;
+            font-style: italic;
+        }
+        p::selection{
+            background-color: yellow;
+        }
+        p:hover{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <pre>
+            <a href="#" class="a1">Home</a>    <a href="#" class="a2">About Us</a>    <a href="#" class="a3">Contact Us</a>
+        </pre>
+    </div>
+    <br><br><br><br><br><br><br>
+    <div class="p" style="width: 1000px; margin: auto;">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi architecto sapiente porro perspiciatis, animi quis necessitatibus doloremque tempore culpa nostrum repudiandae natus eligendi nemo vel vitae dolore quam aliquam incidunt a ratione at et rem assumenda? Soluta possimus inventore eaque quam expedita perspiciatis earum porro molestiae vero, quia, aliquam facere id magni. Molestiae, nobis saepe, ipsa aperiam id hic natus laboriosam architecto reiciendis et temporibus molestias laudantium delectus eaque nesciunt voluptatem impedit atque veniam numquam beatae culpa tenetur. Quibusdam distinctio quasi sequi pariatur neque natus assumenda soluta nemo, laudantium corrupti numquam odit dolorem necessitatibus cupiditate minima laboriosam architecto deleniti ea?
+        </p>
+    </div>
+</body>
+</html>

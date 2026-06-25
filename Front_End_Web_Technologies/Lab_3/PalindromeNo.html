@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Enter a no.: "));
+        let rem = 0;
+        let temp = n; 
+
+        for(;n!=0;){
+            rem = (rem*10) + (n%10);
+            n = parseInt(n/10);
+        }
+
+        if(temp == rem){
+            alert("Palindrome No. ('-')")
+            document.write("Palindrome No. ('-')");
+            console.log("Palindrome No. ('-')");
+        }
+        else{
+            alert("Not a Palindrome No.!")
+            document.write("Not a Palindrome No.!");
+            console.log("Not a Palindrome No.!");
+        }
+
+    </script>
+</body>
+</html>

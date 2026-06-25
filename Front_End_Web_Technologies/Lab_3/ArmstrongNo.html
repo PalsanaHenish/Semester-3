@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Enter a no.: "));
+        let t = n;
+        let c = 0;
+
+        for(;t != 0;c++){
+            t = parseInt(t/10);
+        }
+
+        t = n;
+        let sum = 0;
+        while(t != 0){
+            sum = sum + (Math.pow(t%10,c));
+            t = parseInt(t/10);
+        }
+
+        if(sum == n){
+            alert("Armstrong No. ('-')");
+        }
+        else{
+            alert("Not an Armstrong No.!");
+        }
+        
+
+    </script>
+</body>
+</html>

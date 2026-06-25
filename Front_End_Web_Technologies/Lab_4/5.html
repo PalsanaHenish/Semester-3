@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        n = parseInt(prompt("Enter a two digit no.: "));
+        pdt = 1;
+        b = n%10;
+        a = parseInt(n/10);
+        
+        if(n==0){
+            document.write("Enter Two Digit No. Refresh And Try Again........");
+        }
+        else{
+            for(i=0; i<b; i++){
+                pdt = pdt*a;
+            }
+            document.write(pdt);
+        }
+    </script>
+</body>
+</html>
