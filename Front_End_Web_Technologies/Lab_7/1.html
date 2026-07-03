@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <table border=1 celspacing=0>
+        <tbody>
+            <tr>
+                <td colspan="4" style="height: 50px;">
+                    <input type="text" id="mytext">
+                </td>
+            </tr>
+
+            <tr>
+                <td><button onclick="clearAll()">AC</button></td>
+                <td><button onclick="remove()">-></button></td>
+                <td><button onclick="display('%')">%</button></td>
+                <td><button onclick="display('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display('1')">1</button></td>
+                <td><button onclick="display('2')">2</button></td>
+                <td><button onclick="display('3')">3</button></td>
+                <td><button onclick="display('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display('4')">4</button></td>
+                <td><button onclick="display('5')">5</button></td>
+                <td><button onclick="display('6')">6</button></td>
+                <td><button onclick="display('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display('7')">7</button></td>
+                <td><button onclick="display('8')">8</button></td>
+                <td><button onclick="display('9')">9</button></td>
+                <td><button onclick="display('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display('0')">0</button></td>
+                <td><button onclick="display('00')">00</button></td>
+                <td><button onclick="display('.')">.</button></td>
+                <td><button onclick="answer()">=</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function display(n){
+            document.getElementById('mytext').value += n ;
+        }
+
+        function clearAll(){
+            document.getElementById("mytext").value = "";
+        }
+
+        function remove(){
+            nm = document.getElementById('mytext').value;
+            result = nm.slice(0,-1);
+            document.getElementById('mytext').value = result;
+        }
+
+        function answer(){
+            ans = eval(document.getElementById('mytext').value);
+            document.getElementById('mytext').value = ans;
+        }
+    </script>
+</body>
+</html>

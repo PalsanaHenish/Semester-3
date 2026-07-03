@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <form novalidate onsubmit="SubmitForm(event)">
+        <label for="uname">UserName</label>
+        <br>
+        <input type="text" id="uname">
+        <br><br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" id="password">
+        <br><br>
+        <label for="age">Age</label>
+        <br>
+        <input type="number" id="age">
+        <br><br>
+        <label for="enrollment">Enrollment</label>
+        <br>
+        <input type="number" id="enrollment">
+        <br><br>
+        <label for="email">Email</label>
+        <br>
+        <input type="text" id="email">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function SubmitForm(e){
+            e.preventDefault();
+
+            username = document.getElementById('uname').value;
+            pass = document.getElementById('password').value;
+            age2 = document.getElementById('age').value;
+            enrol = document.getElementById('enrollment').value;
+            gmail = document.getElementById('email').value;
+
+            uname = /^[A-Za-z\s]{8,20}$/;
+            password = /^[A-Za-z0-9]{8,12}$/;
+            age = /^[0-9]{2}$/;
+            enrollment = /^[0-9]{11}$/;
+            email = /^[a-z0-9@.]{5,30}$/;
+
+            if(!uname.test(username)){
+                alert('Invalid UserName');
+                return;
+            }
+            if(!password.test(pass)){
+                alert('Invalid password');
+                return;
+            }
+            if(!age.test(age2)){
+                alert('Invalid age');
+                return;
+            }
+            if(!enrollment.test(enrol)){
+                alert('Invalid Enrollment');
+                return;
+            }
+            if(!email.test(gmail)){
+                alert('Invalid Email');
+                return;
+            }    
+            alert('Submitted Successfully!');
+        }
+        
+    </script>
+</body>
+</html>
