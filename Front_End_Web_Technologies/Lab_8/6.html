@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+    <style>
+        span{
+            visibility: hidden;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form novalidate onsubmit="SubmitForm(event)">
+        <label for="uname">UserName</label>
+        <br>
+        <input type="text" id="uname">
+        <br>
+        <span id="unError">Invalid Username!</span>
+        <br><br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" id="password">
+        <br>
+        <span id="pError">Invalid Password!</span>
+        <br><br>
+        <label for="age">Age</label>
+        <br>
+        <input type="number" id="age">
+        <br>
+        <span id="aError">Invalid Age!</span>
+        <br><br>
+        <label for="enrollment">Enrollment</label>
+        <br>
+        <input type="number" id="enrollment">
+        <br>
+        <span id="enrError">Invalid Enrollment No.!</span>
+        <br><br>
+        <label for="email">Email</label>
+        <br>
+        <input type="text" id="email">
+        <br>
+        <span id="emError">Invalid Email!</span>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function SubmitForm(e){
+            e.preventDefault();
+
+            uname = document.getElementById("uname");
+            password = document.getElementById("password");
+            age = document.getElementById("age");
+            enrollment = document.getElementById("enrollment");
+            email = document.getElementById("email");
+
+            un = /^[A-Za-z\s]$/;
+            p = /^[A-Za-z0-9]{8,12}/;
+            a = /^[0-9]{1,2}/;
+            enr = /^[0-9]{11}/;
+            em = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            
+        }
+    </script>
+</body>
+</html>

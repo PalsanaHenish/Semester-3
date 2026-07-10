@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 100px;
+            text-align: center;
+            font-size: xx-large;
+            padding-top: 210px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv"></div>
+
+    <script>
+        myDiv = document.getElementById("myDiv");
+
+        myDiv.addEventListener("click",function(){
+            myDiv.innerHTML="Clicked";
+        });
+
+        myDiv.addEventListener("dblclick",function(){
+            myDiv.innerHTML="Double Clicked";
+        });
+
+        myDiv.addEventListener("mousedown",function(){
+            myDiv.innerHTML="Button Pressed";
+        });
+
+        myDiv.addEventListener("wheel",function(){
+            myDiv.innerHTML="Mouse Wheel Scrolled";
+        });
+
+        myDiv.addEventListener("mouseover",function(){
+            myDiv.innerHTML="Pointer Entered To Div";
+        });
+
+        myDiv.addEventListener("mouseout",function(){
+            myDiv.innerHTML="Pointer Left From Div";
+        });
+    </script>
+</body>
+</html>
