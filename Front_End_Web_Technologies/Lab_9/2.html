@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const PI = 3.14;
+        document.write('PI = ' + PI + '<br/>');
+
+        var a = 10;
+        let b = 10;
+        document.write('Outside a = ' + a + '<br/>');
+        document.write('Outside b = ' + b + '<br/>');
+
+        demo();
+
+        function demo(){
+
+            if (true) {
+                a = 30;
+                b = 30;
+                document.write('Inside Block a = ' + a + '<br/>');
+                document.write('Inside Block b = ' + b + '<br/>');
+            }
+
+            a = 20;
+            b = 20;
+            document.write('Inside Function a = ' + a + '<br/>');
+            document.write('Inside Function b = ' + b + '<br/>');
+
+        }
+    </script>
+</body>
+</html>

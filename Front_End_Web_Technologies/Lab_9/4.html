@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #myImg {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        height: 150px;
+        width: 150px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="increaseSize()">Increase Size</button>
+    <button onclick="decreaseSize()">Decrease Size</button>
+    <button onclick="startRight()">Right</button>
+    <button onclick="startLeft()">Left</button>
+    <button onclick="startTop()">Top</button>
+    <button onclick="startBottom()">Bottom</button>
+    <div id="myImg"></div>
+    <script>
+      currentSize = 150;
+      currentLeft = 200;
+      currentTop = 200;
+      intervalRef = 0;
+      function increaseSize() {
+        currentSize += 50;
+        myImg = document.getElementById("myImg");
+        myImg.style.height = currentSize + "px";
+      }
+      function decreaseSize() {
+        currentSize -= 50;
+        myImg = document.getElementById("myImg");
+        myImg.style.height = currentSize + "px";
+      }
+      function startRight() {
+        clearInterval(intervalRef);
+        intervalRef = setInterval(moveRight, 5);
+      }
+      function moveRight() {
+        currentLeft += 1;
+        myImg = document.getElementById("myImg");
+        myImg.style.left = currentLeft + "px";
+      }
+      function startLeft() {
+        clearInterval(intervalRef);
+        intervalRef = setInterval(moveLeft, 5);
+      }
+      function moveLeft() {
+        currentLeft -= 1;
+        if (currentLeft < 0) {
+          currentLeft = screen.availWidth;
+        }
+        myImg = document.getElementById("myImg");
+        myImg.style.left = currentLeft + "px";
+      }
+      function startBottom() {
+        clearInterval(intervalRef);
+        intervalRef = setInterval(moveBottom, 5);
+      }
+      function moveBottom() {
+        currentTop += 1;
+        myImg = document.getElementById("myImg");
+        myImg.style.top = currentTop + "px";
+      }
+      function startTop() {
+        clearInterval(intervalRef);
+        intervalRef = setInterval(moveTop, 5);
+      }
+      function moveTop() {
+        currentTop -= 1;
+        myImg = document.getElementById("myImg");
+        myImg.style.top = currentTop + "px";
+      }
+
+      document.addEventListener("keydown", controlGame);
+
+      function controlGame(e) {
+        if (e.key == "ArrowLeft") {
+          startLeft();
+        } else if (e.key == "ArrowRight") {
+          startRight();
+        } else if (e.key == "ArrowUp") {
+          startTop();
+        } else if (e.key == "ArrowDown") {
+          startBottom();
+        }
+      }
+    </script>
+  </body>
+</html>
