@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <h1>Use Of Arrow Function</h1>
+    <h2 id="something"></h2>
+
+    <script>
+        a = parseInt(prompt("Enter no. a:"));
+        b = parseInt(prompt("Enter no. b:"));
+        sum = (a,b) => a+b;
+        document.getElementById('something').innerHTML = sum(a,b);
+    </script>
+</body>
+</html>

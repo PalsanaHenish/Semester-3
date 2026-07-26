@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    101
+    <input type="checkbox" name="anything" id="1">
+    <br>
+    202
+    <input type="checkbox" name="anything" id="2">
+    <br>
+    303
+    <input type="checkbox" name="anything" id="3">
+    <br>
+    404
+    <input type="checkbox" name="anything" id="4">
+    <br>
+    505
+    <input type="checkbox" name="anything" id="5">
+    <br>
+    <h1 id="result"></h1>
+
+    <script>
+        temp = [];
+
+        function display(num){
+            temp.push(num);
+            document.getElementById('result').innerHTML = temp;
+        }
+
+        document.getElementById('1').addEventListener("change",()=>display(101));
+        document.getElementById('2').addEventListener("change",()=>display(102));
+        document.getElementById('3').addEventListener("change",()=>display(103));
+        document.getElementById('4').addEventListener("change",()=>display(104));
+        document.getElementById('5').addEventListener("change",()=>display(105));
+    </script>
+</body>
+</html>
