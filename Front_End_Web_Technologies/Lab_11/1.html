@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    
+    <script>
+        class Bike{
+            constructor(bname,cname,cc,color){
+                this.bname = bname;
+                this.cname = cname;
+                this.cc = cc;
+                this.color = color;
+            }
+
+            displayDetails(){
+                console.log("Bike Name: "+this.bname);
+                console.log("Company Name: "+this.cname);
+                console.log("CC: "+this.cc);
+                console.log("Color: "+this.color);
+            }
+        }
+
+        b1 = new Bike('Splender+','Hero',125,'Red');
+        b2 = new Bike('Unicorn','Honda',160,'Black');
+
+        b1.displayDetails();
+        console.log("\n\n");
+        b2.displayDetails();
+    </script>
+</body>
+</html>

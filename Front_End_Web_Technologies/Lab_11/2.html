@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <script>
+        arr = [
+            obj1 = {
+                FirstName:"Dhairya",
+                City:"Mahesmati",
+                Age:18,
+            },
+            obj2 = {
+                FirstName:"Utsav",
+                City:"Khansar",
+                Age:19
+            },
+            obj3 = {
+                FirstName:"Marth",
+                City:"Dholakpur",
+                Age:20
+            }
+        ];
+
+        let spreadArr = [...arr];
+
+        let mergedArr = [...arr,...spreadArr];
+
+        console.log(mergedArr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <script>
+        arr = [
+            obj1 = {
+                FirstName:"Dhairya",
+                City:"Mahesmati",
+                Age:18,
+            },
+            obj2 = {
+                FirstName:"Utsav",
+                City:"Khansar",
+                Age:19
+            },
+            obj3 = {
+                FirstName:"Marth",
+                City:"Dholakpur",
+                Age:20
+            },
+            obj4 = {
+                FirstName:"Pujan",
+                City:"Tokyo",
+                Age:21
+            },
+            obj5 = {
+                FirstName:"Vraj",
+                City:"Hadala",
+                Age:22
+            }
+        ];
+
+        let [a,b,c,...others] = arr;
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(others);
+
+        let {FirstName,City,Age} = a;
+
+        console.log("Object Destructuring\n");
+        console.log(FirstName);
+        console.log(City);
+        console.log(Age);
+
+    </script>
+</body>
+</html>
