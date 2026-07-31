@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+
+    <div id="myDiv">
+        <h1>Hi!</h1>
+        <h2>I'm Dhairya</h2>
+        <h3>And I'm CEO of this universe</h3>
+    </div>
+    <button id="dm">Change BG</button>
+
+    <script>
+        $('#dm').click(
+            () => {
+                $('#myDiv').children().css('background-color','red');
+                $('#myDiv').children().css('color','white');
+            }
+        );
+    </script>
+</body>
+
+</html>

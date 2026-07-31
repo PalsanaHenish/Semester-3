@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+
+    <div>
+        <h1 id="txt">Dhairya Makwana,</h1>
+        <h1>Yes I'm</h1>
+        <h1>Dhairya Makwana</h1>
+    </div>
+    <button id="dm">Hide/Show</button>
+
+    <script>
+        $('#dm').click(
+            () => { $('#txt').siblings().toggle()}
+        );
+    </script>
+</body>
+
+</html>

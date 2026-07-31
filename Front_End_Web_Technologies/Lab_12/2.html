@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+
+    <img src="image.jpg">
+    <button id="up">SlideUp</button>
+    <button id="down">SlideDown</button>
+    <button id="tog">SlideToggle</button>
+
+    <script>
+        $('#up').click(
+            ()=>{$('img').slideUp()}
+        );
+        $('#down').click(
+            ()=>{$('img').slideDown()}
+        );
+        $('#tog').click(
+            ()=>{$('img').slideToggle()}
+        );
+    </script>
+</body>
+</html>

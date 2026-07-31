@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+
+    Name
+    <input type="text">
+
+    <script>
+        $('input').focusin(
+            () => { $('input').css('background-color','lime')}
+        );
+        $('input').focusout(
+            () => { $('input').css('background-color','white')}
+        );
+        
+    </script>
+</body>
+
+</html>

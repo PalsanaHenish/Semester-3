@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No.</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+            <tr>
+                <td>Makwana Dhairya</td>
+                <td>136</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="dm">Add Row</button>
+
+    <script>
+        $('#dm').click(
+            () => { $('#tb').append("<tr><td>Utsav Kanzariya</td><td>117</td></tr>")}
+        );
+    </script>
+</body>
+
+</html>
