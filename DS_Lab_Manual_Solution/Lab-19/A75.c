@@ -40,6 +40,9 @@ int main()
             break;
 
         case 2:
+            printf("\nEnter No. you wanna delete : ");
+            scanf("%d",&x);
+            root = delete(root,x);
             break;
 
         case 3:
@@ -103,12 +106,57 @@ struct node *insert(struct node *root, int x)
 }
 
 struct node *delete(struct node *root, int x){
-
+    if(root == NULL){
+        printf("\nEmpty Tree !\n");
+        return NULL;
+    }
+    else if (x > root->info)
+    {
+        root->right = delete(root->right,x);
+    }
+    else if (x < root->info)
+    {
+        root->left = delete(root->left,x);
+    }
+    else
+    {
+        if(root->left == NULL && root->right ==NULL){
+            free(root);
+            return NULL;
+        }
+        else if (root->left == NULL)
+        {
+            struct node *save = root->right;
+            free(root);
+            return save;
+        }
+        else if (root->right == NULL)
+        {
+            struct node *save = root->left;
+            free(root);
+            return save;
+        }
+        else
+        {
+            struct node *save = root->right;
+            struct node *temp = save;
+            while (temp->left != NULL)
+            {
+                temp = temp->left;
+            }
+            temp->left = root->left;
+            free(root);
+            return save;
+        }
+    }
+    
+    return root;
 }
 
 int search(struct node *root, int x)
 {
-    if (root == NULL){
+    if(root == NULL){
+        printf("\nEmpty Tree !\n");
         return 0;
     }
 
@@ -135,8 +183,10 @@ int search(struct node *root, int x)
 
 void preorderTraversal(struct node *root)
 {
-    if (root == NULL)
+    if(root == NULL){
+        printf("\nEmpty Tree !\n");
         return;
+    }
 
     printf("%d ", root->info);
     if (root->left != NULL)
@@ -151,8 +201,10 @@ void preorderTraversal(struct node *root)
 
 void inorderTraversal(struct node *root)
 {
-    if (root == NULL)
+    if(root == NULL){
+        printf("\nEmpty Tree !\n");
         return;
+    }
 
     if (root->left != NULL)
     {
@@ -169,8 +221,10 @@ void inorderTraversal(struct node *root)
 
 void postorderTraversal(struct node *root)
 {
-    if (root == NULL)
+    if(root == NULL){
+        printf("\nEmpty Tree !\n");
         return;
+    }
 
     if (root->left != NULL)
     {
