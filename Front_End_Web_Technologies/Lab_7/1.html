@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1</title>
+    <style>
+        table{
+            margin: auto;
+            
+        }
+        button{
+            border: 0;
+            background-color: white;
+            width: 100%;
+            text-align: center;
+        }
+        
+
+        td:hover,button:hover{
+            background-color: lightgray;
+        }
+
+
+        
+    </style>
 </head>
 <body>
     <table border=1 celspacing=0>
         <tbody>
             <tr>
-                <td colspan="4" style="height: 50px;">
-                    <input type="text" id="mytext">
+                <td colspan="4">
+                    <input type="text" id="mytext" style="height: 25px;">
                 </td>
             </tr>
 
@@ -49,7 +69,7 @@
 
     <script>
         function display(n){
-            document.getElementById('mytext').value += n ;
+            document.getElementById('mytext').value += n;
         }
 
         function clearAll(){
