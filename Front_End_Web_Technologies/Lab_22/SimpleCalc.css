@@ -1,0 +1,14 @@
+table {
+  margin: auto;
+}
+button {
+  border: 1;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+}
+
+td:hover,
+button:hover {
+  background-color: lightgray;
+}
